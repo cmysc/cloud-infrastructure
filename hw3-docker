@@ -1,5 +1,5 @@
 FROM alpine
-RUN apk add gcc make build-base musl-dev
+RUN apk --update upgrade && apk add gcc make build-base musl-dev
 ADD http://www.iozone.org/src/current/iozone3_365.tar .
 RUN tar -xf iozone3_365.tar 
 RUN cd iozone*/src/current && make linux && ./iozone -Ra  
