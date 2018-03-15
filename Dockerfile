@@ -10,4 +10,11 @@ RUN cd iozone/iozone*/src/current &&\
       ./iozone -Rab output.wks &&\
       cp output.wks ../../../../
       
-
+ 
+ 
+#----------------------------------------------------------------------
+# the above is the first easy method to save the output file together with docker container, so that it can be checked by "docker run -it containnerID"
+#----------------------------------------------------------------------
+# VOLUME /barcelona  # it has been created by "docker volume create barcelona", if not it looks also fine Then using 'docker run containerID -v barcelona:/barcelona "cd iozone/iozone*/src/current/ ./iozone -Rab  > /barcelona/output.wks"  '
+#-------------
+# docker run -it containerID  -v hostPDW/data:/barcelona ' ' ...
