@@ -9,6 +9,5 @@ RUN cd iozone/iozone*/src/current &&\
       make linux &&\
       ./iozone -Rab output.wks &&\
       cp output.wks ../../../../
-   
-VOLUME /barcelona  # it has been created by "docker volume create barcelona"
-RUN cp output.wks "/barcelona"
+      
+
